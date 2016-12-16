@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+  version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="punit">
+		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+		<jta-data-source>myPostgres</jta-data-source>
+		<class>es.jsmontesinos.tomeeapi.entities.Contact</class>
+		<class>es.jsmontesinos.tomeeapi.entities.Region</class>
+		<properties>
+      		<property name="openjpa.Log" value="DefaultLevel=WARN, Tool=INFO"/>
+      		<property name="javax.persistence.schema-generation.scripts.action" value="create"/>
+			<property name="javax.persistence.schema-generation.create-source" value="metadata"/>
+			<property name="javax.persistence.schema-generation.scripts.create-target" value="target/jpa/sql/create-schema.sql"/>
+		</properties>
+	</persistence-unit>
+</persistence>
