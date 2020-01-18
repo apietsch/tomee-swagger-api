@@ -34,7 +34,7 @@
 <script type="text/javascript">
     $(function () {
         new SwaggerUi({
-            url: '<%= application.getContextPath() %>/swagger',
+            url: 'api/swagger',
             dom_id: 'swagger-ui-container',
             swaggerRequstHeaders: 'application/json', // if you don't want to use it add .json to the url
             sorter: 'alpha'

@@ -21,7 +21,7 @@ public class ContactController {
     	return cdao.find(id);
     }
 
-    public List<Contact> getAll(int first, int max) {
+    public List<Contact> getAll(Integer first, Integer max) {
         return cdao.findAll(first, max);
     }
 

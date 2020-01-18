@@ -26,10 +26,12 @@ public class JpaContactDao implements ContactDao{
 
     @SuppressWarnings("unchecked")
     @Override
-	public List<Contact> findAll(int first, int max) {
+	public List<Contact> findAll(Integer first, Integer max) {
         final Query query = em.createQuery("SELECT c FROM Contact c ORDER BY c.id");
-        query.setFirstResult(first);
-        query.setMaxResults(max);
+        if (first !=null  && max != null ) {
+			query.setFirstResult(first);
+			query.setMaxResults(max);
+		}
         return (List<Contact>) query.getResultList();
     }
 

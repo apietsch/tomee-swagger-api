@@ -23,12 +23,11 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
-@Path("/api/contacts")
+@Path("/contacts")
 @Stateless
 @Consumes("application/json")
 @Produces("application/json; charset=UTF-8")
 @Api("contact")
-@RolesAllowed(value = "user")
 public class ContactService {
 
 	@Inject

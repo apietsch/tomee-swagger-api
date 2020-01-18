@@ -8,7 +8,7 @@ public interface ContactDao {
 
 	Contact find(Long id);
 
-	List<Contact> findAll(int first, int max);
+	List<Contact> findAll(Integer first, Integer max);
 
 	Contact save(Contact contact);
 

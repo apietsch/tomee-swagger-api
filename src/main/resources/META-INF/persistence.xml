@@ -4,7 +4,7 @@
   version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
 	<persistence-unit name="punit">
 		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
-		<jta-data-source>myPostgres</jta-data-source>
+		<jta-data-source>my_postgres</jta-data-source>
 		<class>es.jsmontesinos.tomeeapi.entities.Contact</class>
 		<class>es.jsmontesinos.tomeeapi.entities.Region</class>
 		<properties>

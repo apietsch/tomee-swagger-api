@@ -19,3 +19,16 @@ To automatically generate sql DML file to create the database, open-jpa maven pl
 ```
 mvn openjpa:sql
 ```
+
+create database my_postgres;
+create user my_postgres with login superuser password 'my_postgres';
+alter database my_postgres owner to my_postgres;
+
+    <Resource id="my_postgres" type="javax.sql.DataSource">
+		ignoreDefaultValues = false
+		jtaManaged = true
+		jdbcDriver = org.postgresql.Driver
+		jdbcUrl = jdbc:postgresql://localhost:5432/my_postgres
+		userName = my_postgres
+		password = my_postgres
+	</Resource>
