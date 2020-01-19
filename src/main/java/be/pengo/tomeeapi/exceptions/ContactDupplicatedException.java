@@ -1,4 +1,4 @@
-package es.jsmontesinos.tomeeapi.exceptions;
+package be.pengo.tomeeapi.exceptions;
 
 public class ContactDupplicatedException extends RuntimeException {
 

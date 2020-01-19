@@ -1,4 +1,4 @@
-package es.jsmontesinos.tomeeapi;
+package be.pengo.tomeeapi;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

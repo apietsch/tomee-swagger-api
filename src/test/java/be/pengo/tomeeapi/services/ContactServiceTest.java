@@ -1,20 +1,19 @@
-package es.jsmontesinos.tomeeapi.services;
+package be.pengo.tomeeapi.services;
 
 import static org.mockito.Matchers.*;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import be.pengo.tomeeapi.controllers.ContactController;
+import be.pengo.tomeeapi.dao.ContactDao;
+import be.pengo.tomeeapi.entities.Contact;
+import be.pengo.tomeeapi.exceptions.ContactDupplicatedException;
+import be.pengo.tomeeapi.exceptions.ContactNotFoundException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-
-import es.jsmontesinos.tomeeapi.controllers.ContactController;
-import es.jsmontesinos.tomeeapi.dao.ContactDao;
-import es.jsmontesinos.tomeeapi.entities.Contact;
-import es.jsmontesinos.tomeeapi.exceptions.ContactDupplicatedException;
-import es.jsmontesinos.tomeeapi.exceptions.ContactNotFoundException;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ContactServiceTest {

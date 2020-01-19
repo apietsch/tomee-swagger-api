@@ -1,8 +1,8 @@
-package es.jsmontesinos.tomeeapi.dao;
+package be.pengo.tomeeapi.dao;
 
 import java.util.List;
 
-import es.jsmontesinos.tomeeapi.entities.Region;
+import be.pengo.tomeeapi.entities.Region;
 
 public interface RegionDao {
 

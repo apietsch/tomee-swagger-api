@@ -1,4 +1,4 @@
-package es.jsmontesinos.tomeeapi.entities;
+package be.pengo.tomeeapi.entities;
 
 import java.io.Serializable;
 

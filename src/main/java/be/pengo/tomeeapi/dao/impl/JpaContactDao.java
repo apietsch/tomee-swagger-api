@@ -1,4 +1,4 @@
-package es.jsmontesinos.tomeeapi.dao.impl;
+package be.pengo.tomeeapi.dao.impl;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
-import es.jsmontesinos.tomeeapi.dao.ContactDao;
-import es.jsmontesinos.tomeeapi.entities.Contact;
+import be.pengo.tomeeapi.dao.ContactDao;
+import be.pengo.tomeeapi.entities.Contact;
 
 @Stateless
 @Default

@@ -1,4 +1,4 @@
-package es.jsmontesinos.tomeeapi.dao.impl;
+package be.pengo.tomeeapi.dao.impl;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Root;
 
-import es.jsmontesinos.tomeeapi.dao.RegionDao;
-import es.jsmontesinos.tomeeapi.entities.Region;
+import be.pengo.tomeeapi.dao.RegionDao;
+import be.pengo.tomeeapi.entities.Region;
 
 @Default
 @Stateless

@@ -1,4 +1,4 @@
-package es.jsmontesinos.tomeeapi.controllers;
+package be.pengo.tomeeapi.controllers;
 
 
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
-import es.jsmontesinos.tomeeapi.dao.ContactDao;
-import es.jsmontesinos.tomeeapi.entities.Contact;
-import es.jsmontesinos.tomeeapi.exceptions.ContactDupplicatedException;
-import es.jsmontesinos.tomeeapi.exceptions.ContactNotFoundException;
+import be.pengo.tomeeapi.dao.ContactDao;
+import be.pengo.tomeeapi.entities.Contact;
+import be.pengo.tomeeapi.exceptions.ContactDupplicatedException;
+import be.pengo.tomeeapi.exceptions.ContactNotFoundException;
 
 @Stateless
 public class ContactController {

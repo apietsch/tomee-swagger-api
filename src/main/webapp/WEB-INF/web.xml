@@ -18,7 +18,7 @@
 	    </init-param>
 	    <init-param>
 	      <param-name>swagger.api.title</param-name>
-	      <param-value>Tomee Swagger Example API</param-value>
+	      <param-value>Tomee Swagger API</param-value>
 	    </init-param>
 	    <load-on-startup>1</load-on-startup>
   	</servlet>

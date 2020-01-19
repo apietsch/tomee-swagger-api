@@ -1,4 +1,4 @@
-package es.jsmontesinos.tomeeapi.dao.impl;
+package be.pengo.tomeeapi.dao.impl;
 
 import javax.enterprise.inject.Produces;
 import javax.persistence.EntityManager;

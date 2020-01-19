@@ -5,8 +5,8 @@
 	<persistence-unit name="punit">
 		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
 		<jta-data-source>my_postgres</jta-data-source>
-		<class>es.jsmontesinos.tomeeapi.entities.Contact</class>
-		<class>es.jsmontesinos.tomeeapi.entities.Region</class>
+		<class>be.pengo.tomeeapi.entities.Contact</class>
+		<class>be.pengo.tomeeapi.entities.Region</class>
 		<properties>
       		<property name="openjpa.Log" value="DefaultLevel=WARN, Tool=INFO"/>
       		<property name="javax.persistence.schema-generation.scripts.action" value="create"/>

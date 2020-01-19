@@ -1,6 +1,5 @@
-package es.jsmontesinos.tomeeapi.services;
+package be.pengo.tomeeapi.services;
 
-import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -15,10 +14,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
-import es.jsmontesinos.tomeeapi.controllers.ContactController;
-import es.jsmontesinos.tomeeapi.entities.Contact;
-import es.jsmontesinos.tomeeapi.exceptions.ContactDupplicatedException;
-import es.jsmontesinos.tomeeapi.exceptions.ContactNotFoundException;
+import be.pengo.tomeeapi.controllers.ContactController;
+import be.pengo.tomeeapi.entities.Contact;
+import be.pengo.tomeeapi.exceptions.ContactDupplicatedException;
+import be.pengo.tomeeapi.exceptions.ContactNotFoundException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -60,7 +59,7 @@ public class ContactService {
 			return Response.status(Response.Status.CREATED).entity(service.save(contact)).build();
 		} catch (ContactDupplicatedException cde){
 	    	return Response.status(Response.Status.CONFLICT)
-	        		.entity("Dupplicated email: " + contact.getEmail()).build();
+	        		.entity("Other contact already uses email: " + contact.getEmail()).build();
 	    }
 	}
 

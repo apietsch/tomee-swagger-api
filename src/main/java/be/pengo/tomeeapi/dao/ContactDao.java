@@ -1,8 +1,8 @@
-package es.jsmontesinos.tomeeapi.dao;
+package be.pengo.tomeeapi.dao;
 
 import java.util.List;
 
-import es.jsmontesinos.tomeeapi.entities.Contact;
+import be.pengo.tomeeapi.entities.Contact;
 
 public interface ContactDao {
 
