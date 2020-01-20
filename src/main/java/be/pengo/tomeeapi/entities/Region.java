@@ -2,10 +2,7 @@ package be.pengo.tomeeapi.entities;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 /**
@@ -18,9 +15,14 @@ import javax.persistence.Table;
 public class Region implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	private Long id;
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.TABLE, generator="RegionGen")
+	@TableGenerator(name="RegionGen", table="REGION_GEN", pkColumnName="PK",
+			valueColumnName="AID", initialValue = 1, allocationSize = 1)
+	@Column(name="AID")
+	private long id;
+	
 	private String name;
 
 	public Region() {

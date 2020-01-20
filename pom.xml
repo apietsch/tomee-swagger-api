@@ -132,8 +132,6 @@
 			        <connectionDriverName>org.postgresql.Driver</connectionDriverName>
 			        <enforcePropertyRestrictions>true</enforcePropertyRestrictions>
 			        <persistenceXmlFile>${basedir}/src/main/resources/META-INF/persistence.xml</persistenceXmlFile>
-			        <skip>${skip.jpa}</skip>
-			        <sqlFile>${basedir}/src/main/resources/database.sql</sqlFile>
 			    </configuration>
 			    <dependencies>
 		            <dependency>

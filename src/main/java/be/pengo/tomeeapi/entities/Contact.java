@@ -13,14 +13,16 @@ import javax.validation.constraints.Pattern;
  */
 @Entity
 @Table(name = "contacts")
-@SequenceGenerator(name="contactsSeq", initialValue=1, allocationSize=100, sequenceName="contacts_seq")
 public class Contact implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="contactsSeq")
-    private Long id;
+	@GeneratedValue(strategy=GenerationType.TABLE, generator="ContactsGen")
+	@TableGenerator(name="ContactsGen", table="CONTACTS_GEN", pkColumnName="PK",
+			valueColumnName="AID", initialValue = 1, allocationSize = 1)
+	@Column(name="AID")
+	private long id;
 
 	@NotNull(message = "Name is not optional.")
 	private String name;
@@ -52,6 +54,7 @@ public class Contact implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="contact_date", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	private Date contactDate;
+	// ZoneOffset
 
 	@Column(name="identity_id")
 	private String identityId;
