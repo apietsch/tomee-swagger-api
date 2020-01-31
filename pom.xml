@@ -4,7 +4,7 @@
 	<groupId>be.pengo</groupId>
 	<artifactId>tomee-swagger-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<description>A test project with Tomee 7.0.2 and Swagger</description>
 	<dependencies>
 		<dependency>
