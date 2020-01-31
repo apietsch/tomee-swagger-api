@@ -3,8 +3,7 @@
   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
   version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
 	<persistence-unit name="punit">
-		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
-		<jta-data-source>my_postgres</jta-data-source>
+		<jta-data-source>my_database</jta-data-source>
 		<class>be.pengo.tomeeapi.entities.Contact</class>
 		<class>be.pengo.tomeeapi.entities.Region</class>
 		<properties>

@@ -7,6 +7,7 @@ import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import be.pengo.tomeeapi.dao.ContactDao;
@@ -16,7 +17,7 @@ import be.pengo.tomeeapi.entities.Contact;
 @Default
 public class JpaContactDao implements ContactDao{
 
-	@Inject
+	@PersistenceContext(unitName = "myPU")
 	private EntityManager em;
 
 	@Override

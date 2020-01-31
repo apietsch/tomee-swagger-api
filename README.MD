@@ -24,7 +24,7 @@ create database my_postgres;
 create user my_postgres with login superuser password 'my_postgres';
 alter database my_postgres owner to my_postgres;
 
-    <Resource id="my_postgres" type="javax.sql.DataSource">
+    <Resource id="my_database" type="javax.sql.DataSource">
 		ignoreDefaultValues = false
 		jtaManaged = true
 		jdbcDriver = org.postgresql.Driver

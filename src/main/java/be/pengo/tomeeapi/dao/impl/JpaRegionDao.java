@@ -6,6 +6,7 @@ import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -19,7 +20,7 @@ import be.pengo.tomeeapi.entities.Region;
 @Stateless
 public class JpaRegionDao implements RegionDao {
 
-	@Inject
+	@PersistenceContext(unitName = "myPU")
 	private EntityManager em;
 
 	@SuppressWarnings("unchecked")

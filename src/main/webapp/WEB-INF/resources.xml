@@ -2,7 +2,7 @@
 	<Service id="json"
 		class-name="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
 
-	<Resource id="my_postgres" type="DataSource">
+	<Resource id="my_database" type="DataSource">
 		JdbcDriver org.postgresql.Driver
 		JdbcUrl jdbc:postgresql://localhost:5432/my_postgres
 		UserName my_postgres

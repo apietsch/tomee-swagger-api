@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+Optional file.  Allows us to use random ports when running tests.
+The ports are communicated to the test via the @ArquillianResource annotation
+
+
+  @RunWith(Arquillian.class)
+  public class ColorBeanTest {
+
+      @ArquillianResource
+      private URL webappUrl;
+
+      // ....
+  }
+
+If this file is deleted the default Tomcat 8080 port is used
+-->
+<arquillian>
+  <container qualifier="tomee" default="true">
+    <configuration>
+      <property name="httpPort">-1</property>
+      <property name="stopPort">-1</property>
+      <property name="ajpPort">-1</property>
+
+      <property name="properties">
+        fooDS = new://Resource?type=DataSource
+        fooDS.JdbcDriver = org.hsqldb.jdbcDriver
+        fooDS.JdbcUrl = jdbc:hsqldb:mem:arquillian
+        fooDS.UserName = sa
+        fooDS.Password =
+        fooDS.JtaManaged = true
+        fooDS.LogSql = true
+      </property>
+    </configuration>
+  </container>
+  <extension qualifier="persistence">
+    <property name="defaultDataSource">openejb:Resource/fooDS</property>
+  </extension>
+  
+</arquillian>
